@@ -255,3 +255,7 @@ button {
   color: rgb(239 68 68);  
   content: "-";
 }
+
+.line-number-highlight {
+  color: var(--vscode-editorLineNumber-activeForeground)
+}

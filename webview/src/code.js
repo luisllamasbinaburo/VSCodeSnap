@@ -99,20 +99,20 @@ function toggleLineHighlight(e) {
   if(this.parentNode.parentNode.classList.contains("line-highlight")) {
     this.parentNode.parentNode.classList.remove("line-highlight");
     this.parentNode.parentNode.classList.add("line-highlight-git-add");
-    this.classList.add('!text-white')
+    this.parentNode.parentNode.firstChild.classList.add('line-number-highlight')
   } else if (this.parentNode.parentNode.classList.contains("line-highlight-git-add")) {
     this.parentNode.parentNode.classList.remove("line-highlight-git-add");
     this.parentNode.parentNode.classList.add("line-highlight-git-remove");
-    this.classList.add('!text-white')
+    this.parentNode.parentNode.firstChild.classList.add('line-number-highlight')
   } else if (this.parentNode.parentNode.classList.contains("line-highlight-git-remove")) {
     this.parentNode.parentNode.classList.remove("line-highlight");
     this.parentNode.parentNode.classList.remove("line-highlight-git-add");
     this.parentNode.parentNode.classList.remove("line-highlight-git-remove");
-    this.classList.remove('text-white')
+    this.parentNode.parentNode.firstChild.classList.remove('line-number-highlight')
   } else {
     this.parentNode.parentNode.classList.add("line-highlight");
     this.parentNode.parentNode.classList.remove("line-highlight-git-add");
     this.parentNode.parentNode.classList.remove("line-highlight-git-remove");
-    this.classList.add('!text-white')
+    this.parentNode.parentNode.firstChild.classList.add('line-number-highlight')
   }
 };
